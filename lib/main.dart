@@ -11,13 +11,32 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Container(
-            height: 100.0,
-            width: 100.0,
-            margin: EdgeInsets.all(20.0),
-            padding: EdgeInsets.all(20.0),
-            color: Colors.amber,
-            child: Text('Hello'),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Container(
+                height: 100.0,
+                width: 100.0,
+                color: Colors.amber,
+                child: Text('Container 1'),
+              ),
+              SizedBox(height: 10.0),
+              Container(
+                width: double.infinity,
+              ),
+              Container(
+                height: 100.0,
+                width: 100.0,
+                color: Colors.deepPurple,
+                child: Text('Container 2'),
+              ),
+              Container(
+                height: 100.0,
+                width: 100.0,
+                color: Colors.deepOrangeAccent,
+                child: Text('Container 3'),
+              ),
+            ],
           ), // o container só pode ter um child
         ),
       ),
