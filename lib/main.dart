@@ -9,6 +9,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          title: Center(
+            child: Text(
+              'My visit card',
+              style: TextStyle(
+                fontFamily: 'Courgette',
+              ),
+            ),
+          ),
+          backgroundColor: Colors.teal[900],
+        ),
         backgroundColor: Colors.teal,
         body: SafeArea(
             child: Column(
