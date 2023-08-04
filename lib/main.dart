@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
             child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             CircleAvatar(
               backgroundColor: Colors.amber,
@@ -36,47 +37,44 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 2.5,
                   fontWeight: FontWeight.bold),
             ),
-            Container(
-              color: Colors.white,
-              padding: EdgeInsets.all(10.0),
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: Row(
-                children: <Widget>[
-                  Icon(
+            SizedBox(
+              height: 20.0,
+              width: 150.0,
+              child: Divider(
+                color: Colors.orange[100],
+              ),
+            ),
+            Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
                     Icons.phone,
                     color: Colors.teal[900],
                   ),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text(
-                    '+55 11 96692 6572',
+                  title: Text(
+                    '+55 (11) 9 6692 6572',
                     style: TextStyle(
                         color: Colors.teal[900],
-                        fontFamily: 'SourceCodePro',
-                        fontSize: 20.0),
-                  )
-                ],
+                        fontSize: 20.0,
+                        fontFamily: 'Source Code Pro'),
+                  ),
+                )),
+            Card(
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.email,
+                  color: Colors.teal[900],
+                ),
+                title: Text(
+                  'mcs9823@gmail.com',
+                  style: TextStyle(
+                      fontSize: 20.0,
+                      fontFamily: 'SourceCodePro',
+                      color: Colors.teal[900]),
+                ),
               ),
             ),
-            Container(
-              color: Colors.white,
-              padding: EdgeInsets.all(10.0),
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: Row(
-                children: <Widget>[
-                  Icon(Icons.email),
-                  SizedBox(width: 10.0),
-                  Text(
-                    'mcs9823@gmail.com',
-                    style: TextStyle(
-                        fontFamily: 'SourceCodePro',
-                        color: Colors.teal[900],
-                        fontSize: 20.0),
-                  )
-                ],
-              ),
-            )
           ],
         )),
       ),
